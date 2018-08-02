@@ -13,6 +13,42 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.grid-border {
+  border: 1px solid #000000;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content {
+  justify-content: space-evenly;
+}
+
+.flex-item {
+  background-color: aliceblue;
+  flex-basis: 25%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 360px) {
+  .flex {
+    flex-direction: row;
+  }
+
+  .flex-item {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 720px) {
+  .flex-item {
+    flex-basis: 25%;
+  }
 }
