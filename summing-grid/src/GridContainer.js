@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import { NumberInput } from './NumberInput';
-
-const getSum = (...params) => {
-  let result = 0;
-  params.forEach(param => {
-    const number = parseInt(param, 10);
-    if (!isNaN(number)) {
-      result += number;
-    }
-  });
-  return result;
-}
+import { getSum } from './utils';
 
 class GridContainer extends Component {
   constructor() {
