@@ -1,7 +1,7 @@
 const DOT_ONE = [4, 7, 10];
 const DOT_TWO = [5, 8, 11];
 
-const getLetterFromLength = (length) => {
+export const getLetterFromLength = (length) => {
   let letter;
   switch (length) {
     case 4:
@@ -29,7 +29,7 @@ const getLetterFromLength = (length) => {
   return letter;
 }
 
-const getDotPlacementFromLength = (length) => {
+export const getDotPlacementFromLength = (length) => {
   let dot;
   if (DOT_ONE.includes(length)) {
     dot = 1;
@@ -40,7 +40,6 @@ const getDotPlacementFromLength = (length) => {
 }
 
 export const convertNumTo3DigitRepresentation = (num) => {
-  if (isNaN(num)) return num;
   const numArr = num.toString().split("");
   const length = numArr.length;
   if (length < 4) return num;
@@ -59,9 +58,7 @@ export const getSum = (...params) => {
   let result = 0;
   params.forEach(param => {
     const number = parseInt(param, 10);
-    if (!isNaN(number)) {
       result += number;
-    }
   });
   return convertNumTo3DigitRepresentation(result);
 }

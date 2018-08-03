@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NumberInput } from './NumberInput';
-import { getSum } from './utils';
+import { getSum } from '../utils';
 
 class GridContainer extends Component {
   constructor() {
@@ -13,7 +13,7 @@ class GridContainer extends Component {
     };
   }
 
-  handleNumberChange = event => {
+  handleNumberChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
